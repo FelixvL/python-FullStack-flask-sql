@@ -1,1 +1,13 @@
-hoi
+<script>
+    function naarDeBackend(){
+        fetch('http://localhost:5000/andereingang')
+        .then(res => res.json())
+        .then( data =>{ 
+            console.log(data);
+            document.getElementById("uitdedb").innerHTML = data.naamf;
+        })
+    }
+</script>
+
+<input type="button" value="naarDeBackend" onclick="naarDeBackend()">
+<div id="uitdedb"></div>
